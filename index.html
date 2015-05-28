@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Widget Game</title>
+    <link rel="stylesheet" href="base.css" type="text/css"/>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="lodash.js"></script>
+    <script src="widget.js"></script>
+</head>
+<body ng-controller="myController">
+    <div class="left-side">
+        <button ng-click="create(1)">Widget 1</button>
+        <button ng-click="create(2)">Widget 2</button>
+    </div>
+    <div class="right-side">
+        <div class="widget" ng-repeat="w in widgets" id="{{w.id}}" version="{{w.version}}" remove=remove></div>
+    </div>
+</body>
+</html>
